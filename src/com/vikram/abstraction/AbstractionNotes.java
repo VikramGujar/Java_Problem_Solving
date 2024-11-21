@@ -4,75 +4,102 @@ public class AbstractionNotes {
 
 	
 	/* 
-	 
-	 Abstraction [Hiding Complexity]
 	  
-	 Showing essential details without showing background details is called Abstraction
-	 
-	 	There are two concepts to achieve abstraction :
+	  	Abstraction in Java (Hiding Complexity)
+	  	Abstraction means showing only the essential details 
+	  	of an object and hiding its background details.
+
+		How to Achieve Abstraction:
+		Abstract Class: Allows 0% to 100% abstraction.
+		Interface: Allows 100% abstraction.
 		
-		1. Abstract class [We can achieve 0% to 100%  abstraction]
-		2. Interface [ We can achieve 100 % abstraction ]
 		
 		
-	Abstract class and abstract methods :
+		Abstract Class and Abstract Methods:
+		
+		Abstract Class: A class that provides partial implementation (not complete).
+		Abstract Method: A method declared without a body to make it easier for programmers to use.
+		
+		
+		How to Identify an Abstract Method:
+		
+		Contains the abstract keyword.
+		Has no body (only declaration).
+		Ends with a semicolon (;).
+		When to Use Abstract Methods:
+		When an action is common, but the implementation varies for different subclasses.
+		Abstract methods are usually declared in the parent class and must be implemented in the child classes.
+
+	  
+	  
+	  	Rules for Abstract Classes and Methods:
+	  	
+		If a class has at least one abstract method, 
+		it must be declared as an abstract class.
+		An abstract class cannot be instantiated (no objects can be created).
+		All abstract methods in the parent class must be implemented in the child class, 
+		or the child class will also become abstract.
+		
+		
+		
+		Abstract classes can have:
+		
+		All abstract methods.
+		All concrete (non-abstract) methods.
+		A combination of both.
+		An abstract class may or may not contain abstract methods.
+		An abstract method must be inside an abstract class.
+
+
+
+		What You Cannot Do with Abstract Methods:
+		
+		Cannot declare an abstract method as final, static, or private.
+		(Error: Illegal combination of modifiers)
+		
+		
+		
+		
+		Key Notes on Abstract Classes:
+		Constructor in Abstract Classes:
+		An abstract class can have constructors, 
+		and these constructors will execute when a subclass object is created (using super)
 	
-	A class that dose not provide complete implementation 
-	(Partial implementation) is defined as an abstract class.
-	An abstract method is a common method.
-	which is used to provide easiness to programmer 
-	because the programmer faces complexity to remember the method names.
 	  
 	  
 	  
-	How to recognize abstract method ?
+	  	Example:
+		Abstract Class and Abstract Method:
+		
+		abstract class Animal 
+		{  
+    		abstract void sound(); // Abstract method (no body)  
+    		void eat() {           // Concrete method (has body)  
+        	System.out.println("This animal eats food.");
+    		}  
+		}  
 
-	An abstract method contains abstract keyword.
-	Abstract method dose not contains any method body.
-	At the end there must be a terminator ( ; ) ( Semicolon )
+		class Dog extends Animal {  
+    		void sound() {  
+        	System.out.println("Dog barks.");
+    		}  
+		}  
 
-
-
-	When you should use Abstract method ? 
-
-	In java, whenever action is common but 
-	implementation are different then we should use abstract method. 
-	Generally we declare abstract method in the super class.
-	Its implementation must be provided in the sub classes.
-
-
-
-	If a class contains at least one method as an abstract method
-	then we should compulsory declare that class as an abstract class.
-	Once a class is declared as an abstract class we can not create an object for that class.
-	All the abstract method in the super class must be overridden in the sub classes.
-	Otherwise the sub class will become an abstract class.
-	And as an abstract class we can not create an object for that class as well.
-
-
-
-
-	In an Abstract Class we can write All Abstract method.
-	We can write All Concrete method.
-	We can write Combination of both.
-	It is used to achieve partial abstraction
-	that means by using abstraction classes 
-	we can achieve partial abstraction [  0 to 100%  Abstraction ]
+		public class Main {  
+    		public static void main(String[] args) {  
+        	Animal dog = new Dog();  
+        	dog.sound();  // Calls abstract method implementation  
+        	dog.eat();    // Calls concrete method  
+    		}  
+		}
 
 
-
-	An abstract class may or may not contain abstract method
-	But an Abstract method must have abstract class
-
-
-
-	Note : We can not declare an abstract method as final, static and private 
-		   [ Error : Illegal combination of modifiers ]
-
-
-	Note : Any constructor of abstract class will also be executed
-	 	   with sub class object using super keyword.
-	  
+	  	Key Points from the Example:
+	  	
+		Animal is an abstract class.
+		sound() is an abstract method implemented in Dog.
+		eat() is a concrete method that doesn't need overriding.
+		This makes abstraction clearer and simpler for programmers.
 	  
 	  
 	  
