@@ -3,6 +3,7 @@ package com.lab.dec_04;
 import java.util.function.*;
 
 public class FunctionApplier {
+	
 
 	public static void main(String[] args) {
 		int num = 10;
