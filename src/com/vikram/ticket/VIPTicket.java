@@ -11,6 +11,7 @@ public class VIPTicket extends Ticket {
 	public String getSpecialAccess() {
 		return specialAccess;
 	}
+	
 
 	public void setSpecialAccess(String specialAccess) {
 		this.specialAccess = specialAccess;
