@@ -6,6 +6,7 @@ interface NIT20
 }
 public class Java8_20 {
 	public static void main(String[] args) {
+		@SuppressWarnings("unused")
 		NIT20 nit = (a, b) ->
 		{
 			int div = a/b;

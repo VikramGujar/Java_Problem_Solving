@@ -1,6 +1,7 @@
 package com.lecture.exception_handling;
 
 
+	@SuppressWarnings("serial")
 	final class WithdrawException extends Exception 
 	{
 		public WithdrawException(String msg) 

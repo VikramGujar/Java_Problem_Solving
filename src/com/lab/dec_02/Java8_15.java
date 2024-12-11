@@ -6,6 +6,7 @@ interface NIT15
 }
 public class Java8_15 {
 	public static void main(String[] args) {
+		@SuppressWarnings("unused")
 		NIT15 nit = () -> {return "NareshITechnologies";};	
 		// code will compile successfully 
 		// But with no output  

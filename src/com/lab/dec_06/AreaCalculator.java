@@ -3,7 +3,7 @@ package com.lab.dec_06;
 public class AreaCalculator {
 
 	public static void main(String[] args) {
-		double lenght = 3.5, breath = -4.9;
+		double lenght = 3.5, breath = 4.9;
 		
 		System.out.println("Area : "+calculateArea(lenght,breath));
 

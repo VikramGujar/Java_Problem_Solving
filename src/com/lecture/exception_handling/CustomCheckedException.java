@@ -34,6 +34,7 @@ public class CustomCheckedException
 	
 	public static void validateAge() throws InvalidAgeException
 	{
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Enter your Age :");
 		int age = sc.nextInt();
@@ -47,5 +48,6 @@ public class CustomCheckedException
 			System.out.println("You are eligible for Voting");
 		}
 	}	
+	
 
 }

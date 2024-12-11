@@ -10,8 +10,10 @@ public class Java8_21 {
 		return nit.myInterface(i,j);
 	}
 	public static void main(String[] args) {
+		@SuppressWarnings("unused")
 		NIT21 addition = (a,b) -> a+b;
 		NIT21 multiplication = (a,b) -> a*b;
+		@SuppressWarnings("unused")
 		NIT21 division = (a,b) -> a/b;
 		Java8_21 java = new Java8_21();
 		int result = java.calculate(15, 5, multiplication);

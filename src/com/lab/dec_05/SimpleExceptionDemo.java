@@ -6,8 +6,10 @@ public class SimpleExceptionDemo {
 
 	public static void main(String[] args) {
 
+		@SuppressWarnings("unused")
 		int a,b;
 		try {
+			@SuppressWarnings("resource")
 			Scanner sc = new Scanner(System.in);
 			System.out.println("Enter a value for a :");
 			a=sc.nextInt();
