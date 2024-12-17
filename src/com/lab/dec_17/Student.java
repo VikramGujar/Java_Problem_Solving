@@ -14,7 +14,7 @@ public class Student implements Runnable {
 	
 	public void viewCoursesAndFees() {
 		
-		
+		System.out.println("Available courses : ");
 		for(Course course :institute.getCourses()) {
 			
 			System.out.println(course.toString());

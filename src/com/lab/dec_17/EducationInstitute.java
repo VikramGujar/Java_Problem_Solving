@@ -27,7 +27,13 @@ public class EducationInstitute
 		return offers;
 	}
 	
-	public void enrollStudentInCourse(int courseId, String studentName) {
+	public void enrollStudentInCourse(int courseId, String studentName) 
+	{
+		for(Course c : courses) {
+			if(courseId == c.getCourseId()) {
+				
+			}
+		}
 		System.out.println("Student ID :"+courseId+" Student Name:"+studentName);
 	}
 	
