@@ -10,6 +10,12 @@ this repository offers organized, real-world Java examples and problem-solving s
 
 ---
 
+![Java](https://img.shields.io/badge/Java-100%25-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Repo Size](https://img.shields.io/github/repo-size/username/repository-name)
+
+
+
 ## 📚 Repository Highlights
 - **Structured Topic Notes**: 
 Detailed notes and example programs for key Java topics such as 
