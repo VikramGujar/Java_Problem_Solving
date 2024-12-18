@@ -12,7 +12,7 @@ this repository offers organized, real-world Java examples and problem-solving s
 
 ![Java](https://img.shields.io/badge/Java-100%25-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-blue)
-![Repo Size](https://img.shields.io/github/repo-size/username/repository-name)
+![Repo Size](https://img.shields.io/github/repo-size/VikramGujar/Java_Problem_Solving)
 
 
 
