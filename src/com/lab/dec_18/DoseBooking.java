@@ -24,17 +24,17 @@ public class DoseBooking
 	 public void bookDose() throws DoseBookedException 
 	 {
 		 if(this.booked == true)
-			 throw new DoseBookedException("You have already booked a dose!!!");
+			 throw new DoseBookedException("Dose already booked");
 		 else
 			 this.booked = true;
 	 }
 	 
-	 public void isDoseBooked() 
+	 public boolean isDoseBooked() 
 	 {
 		 if(this.booked == true)
-			 System.out.println("Dose is booked!");
+			 return true;
 		 else
-			 System.out.println("Dose is not booked");
+			 return false;
 	 }
 	 
 	 
