@@ -4,9 +4,8 @@ public class Baker implements Runnable
 {
 	Bakery bakery;
 	
-	
-
-	public Baker(Bakery bakery) {
+	public Baker(Bakery bakery) 
+	{
 		super();
 		this.bakery = bakery;
 	}
@@ -20,7 +19,7 @@ public class Baker implements Runnable
 	@Override
 	public void run() 
 	{
-		while(bakery.getGoodsProducedToday() < bakery.getMAX_GOODS_PER_DAY())
+		while((bakery.isProductionFinished())!=true)
 		{
 			bakery.bakeGoods();
 		}
