@@ -13,7 +13,7 @@ public class Drawer extends Thread
 	
 	public void run() 
 	{
-		int withdrawArray[] = {1200,500,700}; 
+		int withdrawArray[] = {1200,500,700,100,600,500,400}; 
 		
 		for(int withdraw : withdrawArray) 
 		{

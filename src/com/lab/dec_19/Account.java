@@ -30,6 +30,7 @@ public class Account {
 			
 		}
 		balance =balance - amount;
+		System.out.println(amount+" successfully withdrawed !");
 		System.out.println("Balance after withdraw is : "+balance);
 		notify();
 	}

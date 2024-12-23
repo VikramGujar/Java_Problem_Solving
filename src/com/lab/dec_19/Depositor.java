@@ -11,7 +11,7 @@ public class Depositor extends Thread
 	
 	public void run() 
 	{
-		int depositArray[] = {300,500,900}; 
+		int depositArray[] = {300,500,900,700, 500,200}; 
 		
 		for(int deposit : depositArray) 
 		{
