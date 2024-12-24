@@ -60,15 +60,14 @@ public class Bakery
 				e.printStackTrace();
 			}
 		}
-		
+		if(goodsProducedToday<MAX_GOODS_PER_DAY) 
+		{
 			goodsAvailable = goodsAvailable + 10;
 			System.out.println("10 goods baked");
 			goodsProducedToday = goodsProducedToday + 10;
-			if(goodsProducedToday<MAX_GOODS_PER_DAY)
 			System.out.println("Total goods produced today are :"+goodsProducedToday);
-			else
-				System.out.println(goodsProducedToday+"Good production completed for today!!!");
-				notifyAll();	
+			notifyAll();
+		}
 		
 	}
 	
@@ -82,21 +81,30 @@ public class Bakery
 	 */
 	public synchronized void buyGoods(String customerName)
 	{
-		while(goodsAvailable<=0)
-		{
-			System.out.println("no goods are available");
-			System.out.println("Wait for some time!");
-			try 
+		
+			if(goodsAvailable == 0)
 			{
-				wait();
-			} catch (InterruptedException e) 
-			{
-				e.printStackTrace();
+				System.out.println("no goods are available");
+				System.out.println("Wait for some time!");
+				try 
+				{
+					wait();
+				} catch (InterruptedException e) 
+				{
+					e.printStackTrace();
+				}
 			}
-		}
-			goodsAvailable = goodsAvailable - 10;
-			System.out.println(customerName+" bought 10 goods! available goods are "+goodsAvailable);
-			notifyAll();
+			
+			
+		
+			goodsAvailable--;
+			System.out.println(customerName+" bought 1 good! available goods are "+goodsAvailable);
+
+			if(goodsAvailable == 0)
+			{
+				notifyAll();
+			}
+						
 		
 	}
 	
@@ -107,7 +115,7 @@ public class Bakery
 	 */
 	public boolean isProductionFinished()
 	{
-		if(goodsProducedToday >= MAX_GOODS_PER_DAY)
+		if(goodsProducedToday >= MAX_GOODS_PER_DAY && goodsAvailable==0)
 			return true;
 		else
 			return false;

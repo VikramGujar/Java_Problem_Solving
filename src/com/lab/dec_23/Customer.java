@@ -22,20 +22,18 @@ public class Customer implements Runnable
 	@Override
 	public void run() 
 	{
-		while((bakery.isProductionFinished())!=true)
+		while(!bakery.isProductionFinished())
 		{
-			if(bakery.getGoodsAvailable()<=0)
+			bakery.buyGoods(customerName);
+			try 
 			{
-				try 
-				{
 					Thread.sleep(500);
-				} catch (InterruptedException e) 
-				{
+			} catch (InterruptedException e) 
+			{
 					e.printStackTrace();
-				}
-			}
-			bakery.buyGoods(customerName);	
+			}	
 		}
+		System.out.println(customerName+"'s shopping is done!!!");
 		
 	}
 
