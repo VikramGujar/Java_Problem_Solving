@@ -10,7 +10,7 @@ public class Test9
 		// null added to 0th index
 		list.add(null);		// [null]
 		
-		list.add(0, "A");	// [null, "A"]
+		list.add(0, "A");	// ["A", null]
 		
 		// Exception will occur
 		// i.e  [ java.lang.IndexOutOfBoundsException ]

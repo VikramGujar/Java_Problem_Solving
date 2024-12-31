@@ -20,7 +20,7 @@ public class Test8
 		arList.add("Apple");	// arList ["Apple"]
 		list.add("Grapes");		// list ["Banana", "Orange", "Grapes"]
 		
-		// All elements of arList will be append to list
+		// All elements of arList will be append to list from index 3
 		// list ["Banana", "Orange", "Grapes"] + arList ["Apple"]
 		list.addAll(3, arList);	// list ["Banana", "Orange", "Grapes" ,"Apple"]
 		
