@@ -8,7 +8,8 @@ public class Directory
 	private ArrayList<Employee> employeeList;
 	
 	
-	public Directory() {
+	public Directory() 
+	{
 		super();
 		this.employeeList = new ArrayList<Employee>();
 	}

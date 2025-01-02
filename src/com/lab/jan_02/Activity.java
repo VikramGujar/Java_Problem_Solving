@@ -27,6 +27,11 @@ public class Activity
 	public void setSchedule(int schedule) {
 		this.schedule = schedule;
 	}
+
+	@Override
+	public String toString() {
+		return "Activity [name=" + name + ", schedule=" + schedule + "]";
+	}
 	
 	
 	

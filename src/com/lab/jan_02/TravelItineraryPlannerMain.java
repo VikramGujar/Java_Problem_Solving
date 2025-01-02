@@ -5,10 +5,12 @@ public class TravelItineraryPlannerMain
 
 	public static void main(String[] args) 
 	{
+		ItineraryPlanner ip = new ItineraryPlanner();
+		
 		Destination Paris = new Destination("Paris");
 		Destination London = new Destination("London");
 		
-		ItineraryPlanner ip = new ItineraryPlanner();
+		
 		ip.addDestination(London);
 		ip.addDestination(Paris);
 		
@@ -18,8 +20,8 @@ public class TravelItineraryPlannerMain
 		London.addActivitys(ac1);
 		Paris.addActivitys(ac2);
 		
-		System.out.println(ac1.toString());
-		System.out.println(ac2.toString());
+		System.out.println(Paris);
+		System.out.println(London);
 
 	}
 

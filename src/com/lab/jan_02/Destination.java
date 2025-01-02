@@ -23,7 +23,7 @@ public class Destination
 
 	@Override
 	public String toString() {
-		return "Destination [name=" + name + ", activities=" + activities + "]";
+		return "Destination [name=" + name + ", activities=" + activities+ "]";
 	}
 	
 	
