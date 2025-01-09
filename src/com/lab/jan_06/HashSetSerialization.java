@@ -7,9 +7,16 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.HashSet;
 
-public class HashSetSerialization {
-	public static void serializeHashSet(HashSet<String> set, String filename) throws IOException {
-		var fos = new FileOutputStream(filename);
+public class HashSetSerialization 
+{
+	public static void serializeHashSet(HashSet<String> set, String filePath) throws IOException 
+	{
+		// Creates a FileOutputStream object for the file hashset.txt 
+		// If the file doesn't exist, it is created automatically.
+		var fos = new FileOutputStream(filePath);
+		
+		// Creates an ObjectOutputStream wrapped around a FileOutputStream for the file hashset.txt
+		// This setup allows writing objects to a file.
 		var oos = new ObjectOutputStream(fos);
 		try(fos; oos){
 			oos.writeObject(set);
@@ -20,11 +27,12 @@ public class HashSetSerialization {
 		}
 	}
 
-	public static HashSet<String> deserializeHashSet(String filename) throws IOException, ClassNotFoundException {
-		var fis = new FileInputStream(filename);
+	public static HashSet<String> deserializeHashSet(String filePath) throws IOException, ClassNotFoundException {
+		var fis = new FileInputStream(filePath);
 		var ois = new ObjectInputStream(fis);
 		HashSet<String> result = new HashSet<String>();
-		try(fis; ois){
+		try(fis; ois)
+		{
 			result = (HashSet<String>)ois.readObject();
 		}
 		catch (Exception e) {
@@ -33,15 +41,19 @@ public class HashSetSerialization {
 		return result;
 	}
 
-	public static void main(String[] args) {
-		HashSet<String> obj = new HashSet<>();
-		obj.add("Apple");
-		obj.add("Banana");
-		obj.add("Mango");
+	public static void main(String[] args) 
+	{
+		// HashSet of type String 
+		HashSet<String> hashSet = new HashSet<>();
+		hashSet.add("Apple");
+		hashSet.add("Banana");
+		hashSet.add("Mango");
 
+		// Path of respected file to perform oprations 
 		String filePath = "C:\\Users\\vikra\\OneDrive\\Desktop\\new\\hashset.txt";
 		try {
-			serializeHashSet(obj, filePath);
+			// serializeHashSet method call
+			serializeHashSet(hashSet, filePath);
 		} catch (IOException e) {
 			System.err.println(e+ e.getMessage());
 		}

@@ -45,6 +45,7 @@ public class StudentManagementMain
 				{
 					System.out.println("Thank You for your visit ");
 					System.out.println("Bye bye!!!");
+					sc.close();
 					System.exit(choice);
 				}
 			default:
