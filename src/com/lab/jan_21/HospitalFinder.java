@@ -18,12 +18,16 @@ public class HospitalFinder
 		hs.addHospital("Sumodu", "Harry",Arrays.asList("Feaver","Cardivo"), "6864728383", "Mumbai");
 		hs.addHospital("Udai", "Scott",Arrays.asList("Feaver","Cardivo"), "5864728383", "Pune");
 		
-		HashMap<Integer, String> hpList = new HashMap<Integer, String>();
-		hpList = (HashMap<Integer, String>) hs.getHospitals();
+		System.out.println(hs.getHospitals());
 		
-		System.out.println(hpList);
+		System.out.println(hs.getHospitalDetails(104));
 		
 
 	}
 
 }
+/*
+ * 
+A class HospitalFinder is given to you with a main method. 
+Create multiple Hospital objects and test with the methods of HospitalService class here
+*/
