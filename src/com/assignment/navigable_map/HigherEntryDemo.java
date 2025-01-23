@@ -5,7 +5,9 @@ import java.util.TreeMap;
 
 public class HigherEntryDemo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
+		
 		NavigableMap<Integer, String> std = new TreeMap<Integer, String>();
 		std.put(1, "Vikram");
 		std.put(4, "Sai");
@@ -15,15 +17,14 @@ public class HigherEntryDemo {
 		
 		System.out.println(std+"\n");
 		
-		//Returns given key=value pair equals to the given key
+		//Returns given key=value pair greater to the given key
 		System.out.println("For key 4 :"+std.higherEntry(4));
 				
-		//If equal key does not exist
-		//returns the key less than that key 
+		
+		//If greater key not exist
+		//Return null
 		System.out.println("For key 5 :"+std.higherEntry(5));
-				
-		//If greater than the given key not exist 
-		//return null
+	
 		System.out.println("For key 8 :"+std.higherEntry(8));
 
 	}

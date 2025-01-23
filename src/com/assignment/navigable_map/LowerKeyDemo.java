@@ -15,9 +15,15 @@ public class LowerKeyDemo {
 		
 		System.out.println(std+"\n");
 		
-		System.out.println("For key 4 :"+std.floorEntry(4));
-		System.out.println("For key 4 :"+std.floorEntry(4));
-		System.out.println("For key 4 :"+std.floorEntry(4));
+		//Returns Lesser key to the given key
+		System.out.println("For key 4 :"+std.lowerKey(4));
+				
+		
+		//If Lesser key not exist
+		//Return null
+		System.out.println("For key 1 :"+std.lowerEntry(1));
+		
+		System.out.println("For key 0 :"+std.lowerEntry(0));
 
 	}
 

@@ -3,9 +3,12 @@ package com.assignment.navigable_map;
 import java.util.NavigableMap;
 import java.util.TreeMap;
 
-public class HigherKeyDemo {
+public class HigherKeyDemo 
+{
 
-	public static void main(String[] args) {
+	public static void main(String[] args) 
+	{
+		
 		NavigableMap<Integer, String> std = new TreeMap<Integer, String>();
 		std.put(1, "Vikram");
 		std.put(4, "Sai");
@@ -15,9 +18,15 @@ public class HigherKeyDemo {
 		
 		System.out.println(std+"\n");
 		
-		System.out.println("For key 4 :"+std.floorEntry(4));
-		System.out.println("For key 4 :"+std.floorEntry(4));
-		System.out.println("For key 4 :"+std.floorEntry(4));
+		//Returns greater key to the given key
+		System.out.println("For key 4 :"+std.higherKey(4));
+				
+		
+		//If greater key not exist
+		//Return null
+		System.out.println("For key 5 :"+std.higherKey(5));
+	
+		System.out.println("For key 8 :"+std.higherKey(8));
 
 	}
 
