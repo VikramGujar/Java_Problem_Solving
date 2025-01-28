@@ -8,7 +8,7 @@ public class FrequencyCalculation
 
 	public static void main(String[] args) 
 	{
-		String str = "Hello World";
+		String str = "Hello World!$%";
 		Map<Character, Integer> Characters = new HashMap<>();
 		
 		for(int i=0; i<str.length(); i++)
@@ -23,7 +23,7 @@ public class FrequencyCalculation
 				}
 				
 			}
-			if(str.charAt(i)>65)
+			if(str.charAt(i)>65 && str.charAt(i)<122)
 			Characters.putIfAbsent(str.charAt(i), count);
 		}
 		
@@ -44,6 +44,7 @@ Use a Map<Character, Integer> to store character frequencies.
 Iterate through each character in the string:
 Ignore spaces and non-alphanumeric characters using Character.isLetterOrDigit().
 Update the frequency in the HashMap.
+
 
 Constraints:
 Ensure that the program handles edge cases such as:
