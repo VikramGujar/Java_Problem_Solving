@@ -1,15 +1,14 @@
 package com.lab.feb_09;
-// 1. Filter Employees by Gender
+// 2. Filter Employees by Age
 
 import java.util.*;
 
-public class FilterByGender 
+public class FilterByAge 
 {
 
 	public static void main(String[] args) 
 	{
 		List<Employee> list = new ArrayList<>();
-		
 		Employee employee1 = new Employee("Anna", 27, 50000.0, "Male");
 		Employee employee2 = new Employee("Employee 2", 27, 51000.0, "Female");
 		Employee employee3 = new Employee("Bob", 27, 52000.0, "Male");
@@ -32,7 +31,9 @@ public class FilterByGender
 		list.add(employee9);
 		list.add(employee10);
 		
-	    list.stream().filter(e -> e.gender()=="Male").forEach(System.out::println);
+		
+		list.stream().sorted((e1,e2) -> e1.age().compareTo(e2.age()))
+		.forEach(System.out::println);
 
 
 	}
