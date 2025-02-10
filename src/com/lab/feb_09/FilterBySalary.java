@@ -1,9 +1,10 @@
 package com.lab.feb_09;
-// 2. Filter Employees by Age
+
+// 3. Filter Employees by Salary
 
 import java.util.*;
 
-public class FilterByAge 
+public class FilterBySalary 
 {
 
 	public static void main(String[] args) 
@@ -31,11 +32,11 @@ public class FilterByAge
 		list.add(employee9);
 		list.add(employee10);
 		
-		System.out.println("Employees sorted based on AGE ");
-		System.out.println("=============================");
-		list.stream().sorted((e1,e2) -> e1.age().compareTo(e2.age()))
+		
+		System.out.println("Sorted based on SALARY");
+		System.out.println("=======================");
+		list.stream().sorted((e1,e2) -> e1.salary().compareTo(e2.salary()))
 		.forEach(System.out::println);
-
 
 	}
 

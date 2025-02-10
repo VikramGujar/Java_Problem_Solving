@@ -31,9 +31,20 @@ public class FilterByGender
 		list.add(employee8);
 		list.add(employee9);
 		list.add(employee10);
+	
 		
+		System.out.println("Filtered Males");
+		System.out.println("===============\n");
 	    list.stream().filter(e -> e.gender()=="Male").forEach(System.out::println);
-
+	    
+	    
+	    System.out.println("\n============================================\n");
+	    
+	    
+	    
+	    System.out.println("Filtered Females");
+	    System.out.println("================");
+	    list.stream().filter(e -> e.gender()=="Female").forEach(System.out::println);
 
 	}
 
