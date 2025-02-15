@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BankTransactionSystem 
 {
-	private double balance;	// Account balance
+	private double balance = 10000;	// Account balance
 	
 	public void deposit(double amount)	// Method to deposit amount
 	{
@@ -26,6 +26,10 @@ public class BankTransactionSystem
 		{
 			System.err.println("Low balance");	// user friendly MSG to user
 			System.out.println("You are trying to withdraw "+amount+" your balance is "+balance+"");
+		}
+		else if((balance-amount)<10000)
+		{
+			System.err.println("You have to maintain minimum 10000 balance");
 		}else
 		this.balance -= amount;
 		System.out.println("Amount disposited succesfully!");
