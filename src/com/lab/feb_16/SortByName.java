@@ -1,12 +1,8 @@
-package com.lab.feb_10;
-//Calculate Average Salary
+package com.lab.feb_16;
 
 import java.util.*;
 
-
-import com.lab.feb_09.Employee;
-
-public class AvgSal 
+public class SortByName 
 {
 
 	public static void main(String[] args) 
@@ -34,23 +30,13 @@ public class AvgSal
 		list.add(employee9);
 		list.add(employee10);
 		
+		System.out.println("********* Emplyee sorted by Names ********\n");
+		list.stream().sorted((e1,e2) -> e1.name().compareTo(e2.name())).
+		forEach(System.out::println);
+		
+		System.out.println();
+		list.stream().sorted(Comparator.comparing(Employee::name)).forEach(System.out::println);
 
-		
-		double average = list.stream().mapToDouble(Employee::salary)
-		.average().orElseThrow();
-		System.out.println("The Average salary is : "+average);
-		
-		/*
-		List<Double> salAll =
-		list.stream().map(e -> e.salary()).collect(Collectors.toList());
-		double salSum = 0;
-		for(Double s : salAll)
-		{
-			salSum+=s;
-		}
-		
-		System.out.println("The Average salary is : "+(salSum/salAll.size()));
-		*/
 	}
 
 }
